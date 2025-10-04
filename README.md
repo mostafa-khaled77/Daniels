@@ -19,7 +19,7 @@ Daniels  website built with HTML, CSS, and Bootstrap.  Fully responsive design f
 
 ## Live Demo
 
-You can view the live demo [here](#)  
+You can view the live demo [ https://mostafa-khaled77.github.io/Daniels/] 
 
 ## Author
 
