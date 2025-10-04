@@ -1,0 +1,321 @@
+/* Start Glopal */
+:root {
+  --main-font: "Montserrat", sans-serif;
+  --primary-font: "Poppins", sans-serif;
+  --main-color: #1c1c1c;
+  --primary-color: #ffffff;
+  --scroll-padding: 75px;
+}
+body {
+  font-family: var(--primary-font);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--main-font);
+}
+.main-color {
+  color: var(--main-color);
+}
+.primary-color {
+  color: var(--primary-color);
+}
+.bg-main-color {
+  background-color: var(--main-color);
+}
+.bg-primary-color {
+  background-color: var(--primary-color);
+}
+.header-address h1 {
+  font-weight: 900;
+  font-size: 40px;
+  width: fit-content;
+}
+.header-address h1:after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+  left: 0;
+  bottom: -10px;
+}
+/*End Glopal */
+
+/* Start NavBar */
+.navbar .navbar-brand {
+  letter-spacing: 1.2px;
+  font-family: var(--main-font);
+}
+nav.navbar {
+  background-color: rgba(0, 0, 0, 0.456);
+}
+.navbar .navbar-brand {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.navbar .nav-link {
+  font-size: 14px;
+}
+.navbar .nav-link::after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: var(--primary-color);
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active:after {
+  width: 100%;
+}
+/* End NavBar */
+
+/* Start Header  */
+#home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.648)),
+    url(../images/imgi_11_bg.jpg);
+  background-size: cover;
+  min-height: 100vh;
+}
+#home h2 {
+  font-size: 50px;
+}
+#home h3 {
+  font-size: 60px;
+}
+@media screen and (max-width: 768px) {
+  #home h2 {
+    font-size: 25px;
+  }
+  #home h3 {
+    font-size: 35px;
+  }
+}
+#home .home-icons a {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #1c1c1c68;
+}
+/* End Header  */
+
+/* Start About */
+#about {
+  padding-top: var(--scroll-padding);
+}
+#about .about-image:after {
+  content: "";
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: -40px;
+  bottom: -40px;
+  z-index: -1;
+}
+#about .progress {
+  height: 23px;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 12%);
+}
+#about .progress .progress-bar {
+  width: 10%;
+  animation: fill 3s forwards;
+}
+
+@keyframes fill {
+  from {
+    width: 25%;
+  }
+  to {
+    width: var(width);
+  }
+}
+#about button:last-child,
+#about button:first-child,
+#contact button {
+  transition: all 0.4s ease-in-out;
+  font-size: 13px;
+}
+#about button:first-child:hover,
+#contact button:hover {
+  background-color: var(--primary-color);
+  color: var(--main-color) !important;
+}
+#about button:last-child:hover {
+  color: var(--primary-color);
+  background-color: var(--main-color);
+}
+/* End About  */
+/* Start Services */
+#services {
+  background-color: #f7f7f7;
+  padding-top: var(--scroll-padding);
+}
+#services .services-card div {
+  width: 70px;
+  height: 70px;
+  background-color: #77777729;
+  transition: all 0.3s ease-in-out;
+}
+#services .services-card div:hover {
+  color: var(--primary-color);
+  background-color: var(--main-color);
+}
+#services p {
+  font-size: 14px;
+}
+/*End Services */
+/*Start works */
+#works {
+  padding-top: var(--scroll-padding);
+}
+#works .layer {
+  inset: 8px;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+#works .portfolio-card:hover .layer {
+  opacity: 1;
+  transform: translateY(0px);
+}
+#works .layer-content h6 {
+  transform: translateY(-10px);
+  font-size: 12px;
+  letter-spacing: 1.9px;
+  transition: all 0.5s 0.1s ease-in-out;
+}
+#works .layer-content .layer-icons {
+  transform: translateY(10px);
+  transition: all 0.6s 0.1s ease-in-out;
+}
+#works .portfolio-card:hover h6,
+#works .portfolio-card:hover .layer-icons {
+  transform: translateY(0);
+}
+#works .layer-icons a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: var(--primary-color);
+  background-color: var(--main-color);
+  transition: all 0.3s ease-in-out;
+}
+#works .layer-icons a:hover {
+  background-color: var(--primary-color);
+  color: var(--main-color);
+}
+#works button.nav-link:after {
+  content: "";
+  display: block;
+  margin-top: 4px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--main-color);
+  transition: all 0.3s ease-in-out;
+}
+#works button.nav-link:active:after,
+#works button.nav-link.active:after {
+  width: 100%;
+}
+/*End works */
+/*Start Clients */
+#client {
+  padding-top: var(--scroll-padding);
+}
+#client .head-clinet-sec {
+  background-color: #f7f7f7;
+}
+#client .Testimonials-cards img {
+  width: 90px;
+  height: 90px;
+}
+#client .Testimonials-cards p:last-of-type {
+  font-size: 13px;
+}
+#client .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  background-color: #b7b7b7;
+  transition: all 0.1s ease-in-out;
+}
+#client .carousel-indicators [data-bs-target]:hover {
+  background-color: #7d8783;
+}
+/*End Clients */
+/* Start Team   */
+#team {
+  background-color: #f7f7f7;
+  padding-top: var(--scroll-padding);
+}
+#team .team-card .team-layer {
+  inset: 7px;
+  transform: scale(0.6) rotateY(0deg);
+  background-color: var(--primary-color);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#team .team-card:hover .team-layer {
+  opacity: 0.9;
+  transform: scale(1) rotateY(360deg);
+}
+#team .team-card img {
+  transition: all 0.3s ease-in-out;
+}
+#team .team-card:hover img {
+  transform: scale(1.1);
+}
+#team .team-card .team-layer .team-layer-icons a {
+  width: 40px;
+  height: 40px;
+  background-color: #1c1c1c;
+  color: var(--primary-color);
+  background-color: var(--main-color);
+  transition: all 0.3s ease-in-out;
+}
+#team .team-card .team-layer .team-layer-icons a:hover {
+  color: var(--main-color);
+  background-color: var(--primary-color);
+  border: 1px solid var(--main-color);
+}
+/* End Team   */
+/* Start Contact  */
+#contact {
+  padding-top: var(--scroll-padding);
+}
+#contact .contact-card a {
+  width: 50px;
+  height: 50px;
+  background-color: #b7b7b74f;
+  color: var(--main-color);
+  transition: all 0.3s ease-in-out;
+}
+#contact .contact-card a:hover {
+  background-color: var(--main-color);
+  color: var(--primary-color);
+}
+#contact .form-control {
+  font-size: 14px;
+}
+#contact .form-control:focus {
+  box-shadow: none;
+}
+textarea.form-control {
+  min-height: 160px;
+}
+/* End Contact  */
+/* Start Footer  */
+
+footer p {
+  font-size: 13px;
+  word-spacing: 2px;
+}
+/* End Footer  */
