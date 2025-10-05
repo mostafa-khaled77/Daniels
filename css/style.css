@@ -33,6 +33,7 @@ h6 {
   font-weight: 900;
   font-size: 40px;
   width: fit-content;
+  z-index: 1;
 }
 .header-address h1:after {
   content: "";
@@ -256,24 +257,25 @@ nav.navbar {
   background-color: #f7f7f7;
   padding-top: var(--scroll-padding);
 }
-#team .team-card .team-layer {
+#team .inner .image .layer {
   inset: 7px;
   transform: scale(0.6) rotateY(0deg);
   background-color: var(--primary-color);
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
-#team .team-card:hover .team-layer {
+#team .inner .image:hover .layer,
+#team .inner:hover .layer {
   opacity: 0.9;
   transform: scale(1) rotateY(360deg);
 }
-#team .team-card img {
+#team .image img {
   transition: all 0.3s ease-in-out;
 }
-#team .team-card:hover img {
+#team .image:hover img {
   transform: scale(1.1);
 }
-#team .team-card .team-layer .team-layer-icons a {
+#team .inner .image .layer a {
   width: 40px;
   height: 40px;
   background-color: #1c1c1c;
@@ -281,7 +283,7 @@ nav.navbar {
   background-color: var(--main-color);
   transition: all 0.3s ease-in-out;
 }
-#team .team-card .team-layer .team-layer-icons a:hover {
+#team .inner .image .layer a:hover {
   color: var(--main-color);
   background-color: var(--primary-color);
   border: 1px solid var(--main-color);
